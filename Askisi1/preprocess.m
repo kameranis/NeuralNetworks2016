@@ -26,7 +26,7 @@ TestData = removeconstantrows('apply', TestData, PS);
 TestData = mapstd('apply', TestData, PS);
 
 % Implement PCA
-[TrainData, PS] = processpca(TrainData, 0.002);
+[TrainData, PS] = processpca(TrainData, 0.01);
 TestData = processpca('apply', TestData, PS);
 
 end

@@ -7,7 +7,7 @@ function [ score ] = metric(values , options)
             recall = mean(values.recall);
             score = 2*precision*recall/(precision+recall);
         case 'accuracy'
-            score = accuracy;
+            score = values.accuracy;
             
     end
 end
