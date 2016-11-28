@@ -50,7 +50,7 @@ for neurons = neurons_2d
             results = [results, struct('score', metric(result, 'accuracy'), 'neurons', neurons, 'train_func', func)];
         end
         accuracies = [accuracies aggregate(results)];
-        fprintf('Hidden Layer: 2, Neurons: [%2.0f %2.0f], Accuracy: %f, train_func=%s\n', accuracies(end).neurons, accuracies(end).accuracy, accuracies(end).train_func);
+        fprintf('Hidden Layer: 2, Neurons: [%2.0f %2.0f], Accuracy: %f, train_func=%s\n', accuracies(end).neurons, accuracies(end).score, accuracies(end).train_func);
     end
 end;
 fprintf('Program paused. Press enter to continue.\n');
