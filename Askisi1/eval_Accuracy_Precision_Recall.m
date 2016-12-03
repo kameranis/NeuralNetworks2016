@@ -5,7 +5,7 @@ function [accuracy,precision,recall]=eval_Accuracy_Precision_Recall(nnOutput,exp
 nnOutput2=zeros(size(nnOutput));
 expectedOutput2=zeros(size(expectedOutput));
 
-for(i=1:107)
+for(i=1:159)
     nnOutput2(nnCategory(i),i)=1;;
     expectedOutput2(category(i),i)=1;
 end
