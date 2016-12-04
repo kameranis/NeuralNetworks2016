@@ -22,8 +22,8 @@ TrainDataTargets=TrainDataTargets(:,indexes) ;
 TestData = removeconstantrows('apply', TestData, PS);
 
 % Normalize Data
-%[TrainData, PS] = mapstd(TrainData);
-%TestData = mapstd('apply', TestData, PS);
+[TrainData, PS] = mapstd(TrainData);
+TestData = mapstd('apply', TestData, PS);
 
 % Implement PCA
 [TrainData, PS] = processpca(TrainData, 0.01);
