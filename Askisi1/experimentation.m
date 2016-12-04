@@ -12,13 +12,13 @@ fprintf('Unprocessed data, %d Train Examples with %d features\n', fliplr(size(Tr
 fprintf('Preprocessed data, %d Train Examples with %d features\n', fliplr(size(TrainData)));
 
 % Set architecture from last step
-neurons = [10 5];
+neurons = 30;
 trainFunc = 'trainlm';
 
 outputTransferFuncs = {'hardlim', 'tansig', 'logsig', 'purelin'};
 i = 1;
 for func = outputTransferFuncs
-    for j=1:2
+    for j=1:20
         [accuracies(j), precision, recall] = testNN(TrainData, TrainDataTargets, TestData, TestDataTargets, neurons, trainFunc, func{1});
         Fsc(j,:) = harmmean([precision recall],2);
     end
@@ -35,7 +35,7 @@ clear F_score accuracy accuracies
 learnFuncs = {'learngd', 'learngdm'};
 i = 1;
 for learnFunc = learnFuncs
-    for j=1:2
+    for j=1:20
         [accuracies(j), precision, recall] = testNN(TrainData, TrainDataTargets, TestData, TestDataTargets, neurons, trainFunc, transferFunc, learnFunc{1});
         Fsc(j,:) = harmmean([precision recall],2);
     end

@@ -20,6 +20,7 @@ net.divideParam.testRatio = 0;
 net.trainParam.epochs = 1000;
 net.trainFcn =  trainFunc;
 net.derivFcn = learnFcn;
+net.trainParam.showWindow = 0;
 
 % Train the Neural Network
 net = train(net, TrainData, TrainDataTargets);

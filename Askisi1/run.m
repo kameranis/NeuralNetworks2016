@@ -21,7 +21,6 @@ fprintf('Initial Training: Hidden Layer: 1, Neurons: [10 15], Accuracy: %f\n', a
 % Part 4: Investigate optimal neuron number based on F1 score and accuracy
 % One layer with 5 to 30 neurons with step 5
 funcs = {'trainlm', 'traingdx', 'traingd', 'traingda'};
-accuracies = zeros(1,20);
 fprintf('Training for one hidden layer and different neuron number\n');
 
 for func = funcs
@@ -32,7 +31,7 @@ for func = funcs
         end
         F_score(neurons/5,:) = mean(Fsc,1);
         accuracy(neurons/5) = mean(accuracies);
-        fprintf('Neurons=%d Accuracy=%.4f \n', neurons, accuracy(neurons/5));
+        fprintf('Neurons: %2d, Training function: %8s, Accuracy=%.4f \n', neurons, func{1}, accuracy(neurons/5));
     end
     
     figure;
@@ -49,20 +48,22 @@ fprintf('Training for 2 hidden layers and different neuron numbers\n');
 for func=funcs
     for neurons1 = 5:5:30
         for neurons2 = 5:5:30
-            for j=1:2
+            for j=1:20
                 [accuracies(j), precision, recall] = testNN(TrainData, TrainDataTargets, TestData, TestDataTargets, [neurons1 neurons2], func{1});
                 Fsc(j,:) = harmmean([precision recall],2);
             end
             F_score2(neurons1/5, neurons2/5, :) = mean(Fsc, 1);
             accuracy2(neurons1/5, neurons2/5) = mean(accuracies);
-            fprintf('Neurons: [%2d %2d], Accuracy: %.4f\n', neurons1, neurons2, accuracy2(neurons1/5, neurons2/5));
+            fprintf('Neurons: [%2d %2d], Training Function: %8s, Accuracy: %.4f\n', neurons1, neurons2, func{1}, accuracy2(neurons1/5, neurons2/5));
         end
     end
+    figure;
     bar(5:5:30,accuracy2);
-    title('Accuracy according to neurons for two hidden layers'); 
+    title(sprintf('Accuracy-neurons for two hidden layers with %s', func{1})); 
     xlabel('First layer');
     ylabel('Accuracy');
-    legend('5','10','15','20','25','30', 'Location', 'eastoutside', 'Orientation', 'vertical');
+    lgd = legend('5','10','15','20','25','30', 'Location', 'eastoutside', 'Orientation', 'vertical');
+    title(lgd, 'Second layer');
 end;
 
 
