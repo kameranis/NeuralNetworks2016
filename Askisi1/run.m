@@ -20,25 +20,25 @@ fprintf('Initial Training: Hidden Layer: 1, Neurons: [10 15], Accuracy: %f\n', a
 
 % Part 4: Investigate optimal neuron number based on F1 score and accuracy
 % One layer with 5 to 30 neurons with step 5
-%funcs = {'trainlm', 'traingdx', 'traingd', 'traingda'};
-% accuracies = zeros(1,20);
-% fprintf('Training for one hidden layer and different neuron number\n');
-% for neurons = 5:5:30
-%     %for func=funcs
-%         for j=1:20
-%             [accuracies(j), precision, recall] = testNN(TrainData, TrainDataTargets, TestData, TestDataTargets, neurons);% %funcs{1});
-%              Fsc(j,:) = harmmean([precision recall],2);
-%         end
-%         F_score(neurons/5,:) = mean(Fsc,1);
-%         accuracy(neurons/5) = mean(accuracies);
-%         fprintf('Neurons=%d Accuracy=%.4f F-score=%.4f\n', neurons, accuracy(neurons/5+1), F_score(neurons/5+1));
-%     %end
-% end;
-% bar([5:5:30],accuracy);
-% title('Accuracy according to neurons for two hidden layers'); 
-% xlabel('First layer');
-% ylabel('Accuracy');
-% legend('0','5','10','15','20','25','30');
+funcs = {'trainlm', 'traingdx', 'traingd', 'traingda'};
+accuracies = zeros(1,20);
+fprintf('Training for one hidden layer and different neuron number\n');
+for neurons = 5:5:30
+    %for func=funcs
+        for j=1:20
+            [accuracies(j), precision, recall] = testNN(TrainData, TrainDataTargets, TestData, TestDataTargets, neurons);% %funcs{1});
+             Fsc(j,:) = harmmean([precision recall],2);
+        end
+        F_score(neurons/5,:) = mean(Fsc,1);
+        accuracy(neurons/5) = mean(accuracies);
+        fprintf('Neurons=%d Accuracy=%.4f F-score=%.4f\n', neurons, accuracy(neurons/5+1), F_score(neurons/5+1));
+    %end
+end;
+bar([5:5:30],accuracy);
+title('Accuracy according to neurons for two hidden layers'); 
+xlabel('First layer');
+ylabel('Accuracy');
+legend('0','5','10','15','20','25','30');
 
 clear accuracies Fsc precision recall
 
