@@ -1,0 +1,4 @@
+-Differences between learngd and traingd
+-Appropriate evaluation of the network (Fscore vs accuracy)
+and distinction between different categories.
+-Proper aggreagation for interpreting the resulting runs
