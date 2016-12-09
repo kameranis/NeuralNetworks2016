@@ -1,0 +1,186 @@
+Training for one hidden layer and different neuron number
+Neurons:  5, Training function:  trainlm, Accuracy=0.8780 
+Neurons: 10, Training function:  trainlm, Accuracy=0.8783 
+Neurons: 15, Training function:  trainlm, Accuracy=0.8899 
+Neurons: 20, Training function:  trainlm, Accuracy=0.8925 
+Neurons: 25, Training function:  trainlm, Accuracy=0.8893 
+Neurons: 30, Training function:  trainlm, Accuracy=0.8918 
+Neurons:  5, Training function: traingdx, Accuracy=0.8491 
+Neurons: 10, Training function: traingdx, Accuracy=0.8777 
+Neurons: 15, Training function: traingdx, Accuracy=0.8736 
+Neurons: 20, Training function: traingdx, Accuracy=0.8415 
+Neurons: 25, Training function: traingdx, Accuracy=0.8799 
+Neurons: 30, Training function: traingdx, Accuracy=0.8528 
+Neurons:  5, Training function:  traingd, Accuracy=0.3651 
+Neurons: 10, Training function:  traingd, Accuracy=0.3500 
+Neurons: 15, Training function:  traingd, Accuracy=0.4371 
+Neurons: 20, Training function:  traingd, Accuracy=0.4770 
+Neurons: 25, Training function:  traingd, Accuracy=0.5415 
+Neurons: 30, Training function:  traingd, Accuracy=0.5352 
+Neurons:  5, Training function: traingda, Accuracy=0.8047 
+Neurons: 10, Training function: traingda, Accuracy=0.8541 
+Neurons: 15, Training function: traingda, Accuracy=0.8623 
+Neurons: 20, Training function: traingda, Accuracy=0.8406 
+Neurons: 25, Training function: traingda, Accuracy=0.8582 
+Neurons: 30, Training function: traingda, Accuracy=0.8409 
+Training for 2 hidden layers and different neuron numbers
+Neurons: [ 5  5], Training Function:  trainlm, Accuracy: 0.8780
+Neurons: [ 5 10], Training Function:  trainlm, Accuracy: 0.8906
+Neurons: [ 5 15], Training Function:  trainlm, Accuracy: 0.8865
+Neurons: [ 5 20], Training Function:  trainlm, Accuracy: 0.8877
+Neurons: [ 5 25], Training Function:  trainlm, Accuracy: 0.8821
+Neurons: [ 5 30], Training Function:  trainlm, Accuracy: 0.8868
+Neurons: [10  5], Training Function:  trainlm, Accuracy: 0.8711
+Neurons: [10 10], Training Function:  trainlm, Accuracy: 0.8827
+Neurons: [10 15], Training Function:  trainlm, Accuracy: 0.8862
+Neurons: [10 20], Training Function:  trainlm, Accuracy: 0.8855
+Neurons: [10 25], Training Function:  trainlm, Accuracy: 0.8865
+Neurons: [10 30], Training Function:  trainlm, Accuracy: 0.8846
+Neurons: [15  5], Training Function:  trainlm, Accuracy: 0.8764
+Neurons: [15 10], Training Function:  trainlm, Accuracy: 0.8792
+Neurons: [15 15], Training Function:  trainlm, Accuracy: 0.8858
+Neurons: [15 20], Training Function:  trainlm, Accuracy: 0.8912
+Neurons: [15 25], Training Function:  trainlm, Accuracy: 0.8862
+Neurons: [15 30], Training Function:  trainlm, Accuracy: 0.8877
+Neurons: [20  5], Training Function:  trainlm, Accuracy: 0.8796
+Neurons: [20 10], Training Function:  trainlm, Accuracy: 0.8796
+Neurons: [20 15], Training Function:  trainlm, Accuracy: 0.8925
+Neurons: [20 20], Training Function:  trainlm, Accuracy: 0.8877
+Neurons: [20 25], Training Function:  trainlm, Accuracy: 0.8903
+Neurons: [20 30], Training Function:  trainlm, Accuracy: 0.8877
+Neurons: [25  5], Training Function:  trainlm, Accuracy: 0.8858
+Neurons: [25 10], Training Function:  trainlm, Accuracy: 0.8896
+Neurons: [25 15], Training Function:  trainlm, Accuracy: 0.8858
+Neurons: [25 20], Training Function:  trainlm, Accuracy: 0.8868
+Neurons: [25 25], Training Function:  trainlm, Accuracy: 0.8915
+Neurons: [25 30], Training Function:  trainlm, Accuracy: 0.8849
+Neurons: [30  5], Training Function:  trainlm, Accuracy: 0.8925
+Neurons: [30 10], Training Function:  trainlm, Accuracy: 0.8877
+Neurons: [30 15], Training Function:  trainlm, Accuracy: 0.8925
+Neurons: [30 20], Training Function:  trainlm, Accuracy: 0.8799
+Neurons: [30 25], Training Function:  trainlm, Accuracy: 0.8887
+Neurons: [30 30], Training Function:  trainlm, Accuracy: 0.8903
+Neurons: [ 5  5], Training Function: traingdx, Accuracy: 0.6950
+Neurons: [ 5 10], Training Function: traingdx, Accuracy: 0.7965
+Neurons: [ 5 15], Training Function: traingdx, Accuracy: 0.7623
+Neurons: [ 5 20], Training Function: traingdx, Accuracy: 0.7733
+Neurons: [ 5 25], Training Function: traingdx, Accuracy: 0.7896
+Neurons: [ 5 30], Training Function: traingdx, Accuracy: 0.7695
+Neurons: [10  5], Training Function: traingdx, Accuracy: 0.7984
+Neurons: [10 10], Training Function: traingdx, Accuracy: 0.8126
+Neurons: [10 15], Training Function: traingdx, Accuracy: 0.8377
+Neurons: [10 20], Training Function: traingdx, Accuracy: 0.8101
+Neurons: [10 25], Training Function: traingdx, Accuracy: 0.8157
+Neurons: [10 30], Training Function: traingdx, Accuracy: 0.8038
+Neurons: [15  5], Training Function: traingdx, Accuracy: 0.6991
+Neurons: [15 10], Training Function: traingdx, Accuracy: 0.8465
+Neurons: [15 15], Training Function: traingdx, Accuracy: 0.8425
+Neurons: [15 20], Training Function: traingdx, Accuracy: 0.8459
+Neurons: [15 25], Training Function: traingdx, Accuracy: 0.8129
+Neurons: [15 30], Training Function: traingdx, Accuracy: 0.8261
+Neurons: [20  5], Training Function: traingdx, Accuracy: 0.7874
+Neurons: [20 10], Training Function: traingdx, Accuracy: 0.8503
+Neurons: [20 15], Training Function: traingdx, Accuracy: 0.8484
+Neurons: [20 20], Training Function: traingdx, Accuracy: 0.8066
+Neurons: [20 25], Training Function: traingdx, Accuracy: 0.8748
+Neurons: [20 30], Training Function: traingdx, Accuracy: 0.7343
+Neurons: [25  5], Training Function: traingdx, Accuracy: 0.8305
+Neurons: [25 10], Training Function: traingdx, Accuracy: 0.8657
+Neurons: [25 15], Training Function: traingdx, Accuracy: 0.8340
+Neurons: [25 20], Training Function: traingdx, Accuracy: 0.8431
+Neurons: [25 25], Training Function: traingdx, Accuracy: 0.7431
+Neurons: [25 30], Training Function: traingdx, Accuracy: 0.6610
+Neurons: [30  5], Training Function: traingdx, Accuracy: 0.8553
+Neurons: [30 10], Training Function: traingdx, Accuracy: 0.8610
+Neurons: [30 15], Training Function: traingdx, Accuracy: 0.8802
+Neurons: [30 20], Training Function: traingdx, Accuracy: 0.8063
+Neurons: [30 25], Training Function: traingdx, Accuracy: 0.7462
+Neurons: [30 30], Training Function: traingdx, Accuracy: 0.7277
+Neurons: [ 5  5], Training Function:  traingd, Accuracy: 0.2799
+Neurons: [ 5 10], Training Function:  traingd, Accuracy: 0.3840
+Neurons: [ 5 15], Training Function:  traingd, Accuracy: 0.3733
+Neurons: [ 5 20], Training Function:  traingd, Accuracy: 0.4267
+Neurons: [ 5 25], Training Function:  traingd, Accuracy: 0.4770
+Neurons: [ 5 30], Training Function:  traingd, Accuracy: 0.4484
+Neurons: [10  5], Training Function:  traingd, Accuracy: 0.2786
+Neurons: [10 10], Training Function:  traingd, Accuracy: 0.4390
+Neurons: [10 15], Training Function:  traingd, Accuracy: 0.4855
+Neurons: [10 20], Training Function:  traingd, Accuracy: 0.5182
+Neurons: [10 25], Training Function:  traingd, Accuracy: 0.4965
+Neurons: [10 30], Training Function:  traingd, Accuracy: 0.5481
+Neurons: [15  5], Training Function:  traingd, Accuracy: 0.3553
+Neurons: [15 10], Training Function:  traingd, Accuracy: 0.4535
+Neurons: [15 15], Training Function:  traingd, Accuracy: 0.5204
+Neurons: [15 20], Training Function:  traingd, Accuracy: 0.5560
+Neurons: [15 25], Training Function:  traingd, Accuracy: 0.5698
+Neurons: [15 30], Training Function:  traingd, Accuracy: 0.5959
+Neurons: [20  5], Training Function:  traingd, Accuracy: 0.4053
+Neurons: [20 10], Training Function:  traingd, Accuracy: 0.5308
+Neurons: [20 15], Training Function:  traingd, Accuracy: 0.5060
+Neurons: [20 20], Training Function:  traingd, Accuracy: 0.5943
+Neurons: [20 25], Training Function:  traingd, Accuracy: 0.6484
+Neurons: [20 30], Training Function:  traingd, Accuracy: 0.6437
+Neurons: [25  5], Training Function:  traingd, Accuracy: 0.3761
+Neurons: [25 10], Training Function:  traingd, Accuracy: 0.5214
+Neurons: [25 15], Training Function:  traingd, Accuracy: 0.5912
+Neurons: [25 20], Training Function:  traingd, Accuracy: 0.6280
+Neurons: [25 25], Training Function:  traingd, Accuracy: 0.6377
+Neurons: [25 30], Training Function:  traingd, Accuracy: 0.6704
+Neurons: [30  5], Training Function:  traingd, Accuracy: 0.4214
+Neurons: [30 10], Training Function:  traingd, Accuracy: 0.5264
+Neurons: [30 15], Training Function:  traingd, Accuracy: 0.6236
+Neurons: [30 20], Training Function:  traingd, Accuracy: 0.6192
+Neurons: [30 25], Training Function:  traingd, Accuracy: 0.6648
+Neurons: [30 30], Training Function:  traingd, Accuracy: 0.7072
+Neurons: [ 5  5], Training Function: traingda, Accuracy: 0.6786
+Neurons: [ 5 10], Training Function: traingda, Accuracy: 0.6695
+Neurons: [ 5 15], Training Function: traingda, Accuracy: 0.7110
+Neurons: [ 5 20], Training Function: traingda, Accuracy: 0.6994
+Neurons: [ 5 25], Training Function: traingda, Accuracy: 0.6676
+Neurons: [ 5 30], Training Function: traingda, Accuracy: 0.6887
+Neurons: [10  5], Training Function: traingda, Accuracy: 0.6855
+Neurons: [10 10], Training Function: traingda, Accuracy: 0.7821
+Neurons: [10 15], Training Function: traingda, Accuracy: 0.7645
+Neurons: [10 20], Training Function: traingda, Accuracy: 0.7824
+Neurons: [10 25], Training Function: traingda, Accuracy: 0.7525
+Neurons: [10 30], Training Function: traingda, Accuracy: 0.7783
+Neurons: [15  5], Training Function: traingda, Accuracy: 0.6613
+Neurons: [15 10], Training Function: traingda, Accuracy: 0.7531
+Neurons: [15 15], Training Function: traingda, Accuracy: 0.7896
+Neurons: [15 20], Training Function: traingda, Accuracy: 0.7777
+Neurons: [15 25], Training Function: traingda, Accuracy: 0.7780
+Neurons: [15 30], Training Function: traingda, Accuracy: 0.7821
+Neurons: [20  5], Training Function: traingda, Accuracy: 0.6204
+Neurons: [20 10], Training Function: traingda, Accuracy: 0.7340
+Neurons: [20 15], Training Function: traingda, Accuracy: 0.7711
+Neurons: [20 20], Training Function: traingda, Accuracy: 0.7833
+Neurons: [20 25], Training Function: traingda, Accuracy: 0.7855
+Neurons: [20 30], Training Function: traingda, Accuracy: 0.8053
+Neurons: [25  5], Training Function: traingda, Accuracy: 0.7082
+Neurons: [25 10], Training Function: traingda, Accuracy: 0.7384
+Neurons: [25 15], Training Function: traingda, Accuracy: 0.7830
+Neurons: [25 20], Training Function: traingda, Accuracy: 0.7780
+Neurons: [25 25], Training Function: traingda, Accuracy: 0.7770
+Neurons: [25 30], Training Function: traingda, Accuracy: 0.7833
+Neurons: [30  5], Training Function: traingda, Accuracy: 0.7025
+Neurons: [30 10], Training Function: traingda, Accuracy: 0.7522
+Neurons: [30 15], Training Function: traingda, Accuracy: 0.7811
+Neurons: [30 20], Training Function: traingda, Accuracy: 0.7758
+Neurons: [30 25], Training Function: traingda, Accuracy: 0.7642
+Neurons: [30 30], Training Function: traingda, Accuracy: 0.7918
+
+Output activation function: hardlim, Accuracy=0.6220
+Output activation function: tansig, Accuracy=0.8909
+Output activation function: logsig, Accuracy=0.8978
+Output activation function: purelin, Accuracy=0.8752
+learning function: learngd, Accuracy=0.8953
+learning function: learngdm, Accuracy=0.8965
+No validation accuracy: 0.8805
+
+Confusion Matrix
+Neurons: 30, Training function:  trainlm
+40.04 0.00 0.00 2.05 0.00
+0.00 21.58 2.09 0.44 0.00
+0.00 7.36 27.70 0.04 2.57
+1.96 0.77 0.05 23.47 0.00
+0.00 0.29 0.16 0.00 28.43
