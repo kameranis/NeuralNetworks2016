@@ -35,5 +35,11 @@ for i=1:orderSteps
     end
 end
 
+for i=1:4*orderSteps
+    for k=1:N
+        somUpdate(patterns(:,k), learningRate, neighborDist)
+    end
+end
+
 end
 
