@@ -21,8 +21,10 @@ function [value] = plot2DSomData(IW,distances,patterns)
 
 %sound([0.0128 0.0256 0.0512 0.1024 0.2048 0.4096 0.8192]);
 
+minMax = minmax(patterns)';
 plot(patterns(1,:),patterns(2,:),'k+');
 hold on;
 plotsom(IW,distances);
+axis('normal');
 hold off;
-pause(0.5);
+% pause(0.5);
