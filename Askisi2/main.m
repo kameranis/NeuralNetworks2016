@@ -20,12 +20,18 @@ tuneLR = 0.1;
 
 % Create SOM for every dataset
 for i=1:2
-    for gridSize=gridSizes
-        mM = minmax(datasets{i});
-        somTrainParameters(orderLR, orderEpochs, tuneLR, @gridtop, @dist);
-        somCreate(mM, gridSize');
-        somTrain(datasets{i});
-        figure;
-        plot2DSomData(IW, distances, datasets{i})
+    for topology={@gridtop, @hexagonalTopology}
+        for distFunction={@dist, @mandist};
+            somTrainParameters(orderLR, orderEpochs, tuneLR, topology{1}, distFunction{1});
+            for gridSize=gridSizes
+                mM = minmax(datasets{i});
+                somCreate(mM, gridSize');
+                somTrain(datasets{i});
+                figure;
+                plot2DSomData(IW, distances, datasets{i})
+            end
+        end
     end
 end
+
+
