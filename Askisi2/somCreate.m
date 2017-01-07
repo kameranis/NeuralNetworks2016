@@ -1,6 +1,6 @@
 function somCreate(minMax,gridSize)
 
-global neuronsPerRow neuronsPerColumn N IW distances dimensions positions;
+global neuronsPerRow neuronsPerColumn N IW distances dimensions positions topology distanceFunction;
 
 neuronsPerRow = gridSize(1,1);
 neuronsPerColumn = gridSize(1,2);
@@ -17,7 +17,7 @@ for i = 1:N
 end
 
 positions = hexagonalTopology(neuronsPerRow,neuronsPerColumn);
-positions = gridtop(neuronsPerRow,neuronsPerColumn);
-distances = dist(positions);
+positions = topology(neuronsPerRow,neuronsPerColumn);
+distances = distanceFunction(positions);
 %%%%%%%%%%%%
 %distances = ring_distances(N);
