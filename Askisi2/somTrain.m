@@ -24,19 +24,19 @@ function somTrain(patterns)
 % σταθερή και ίση με tuneND. Ο ρυθμός μάθησης είτε διατηρείται αμετάβλητος και
 % ίσος με tuneLR, είτε με αρχική τιμή την tuneLR μειώνεται με ιδιαίτερα αργό τρόπο.
 
-global N maxNeighborDist orderSteps orderLR tuneND tuneLR;
+global maxNeighborDist orderSteps orderLR tuneND tuneLR;
 
 for i=1:orderSteps
     % exponential decay for neighbor distance and learning rate
     neighborDist = maxNeighborDist * exp((i-1)/(orderSteps-1) * log(tuneND/maxNeighborDist));
     learningRate = orderLR * exp((i-1)/(orderSteps-1) * log(tuneLR/orderLR));
-    for k=1:N
+    for k=1:length(patterns)
         somUpdate(patterns(:,k), learningRate, neighborDist)
     end
 end
 
 for i=1:4*orderSteps
-    for k=1:N
+    for k=1:length(patterns)
         somUpdate(patterns(:,k), learningRate, neighborDist)
     end
 end
