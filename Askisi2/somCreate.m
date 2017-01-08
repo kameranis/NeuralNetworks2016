@@ -16,7 +16,7 @@ for i = 1:N
     IW(i,:) = rand(1,dimensions).*(maxFeatureValues-minFeatureValues)+minFeatureValues;
 end
 
-positions = hexagonalTopology(neuronsPerRow,neuronsPerColumn);
+%positions = hexagonalTopology(neuronsPerRow,neuronsPerColumn);
 positions = topology(neuronsPerRow,neuronsPerColumn);
 distances = distanceFunction(positions);
 %%%%%%%%%%%%

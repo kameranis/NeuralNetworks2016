@@ -11,6 +11,7 @@ tuneLR = 0.1;
 % 2A2
 runTopologies(datasets, orderLR, orderEpochs, tuneLR);
 
+%%
 % 2A3
 runGridSizes(datasets, orderLR, orderEpochs, tuneLR);
 
@@ -18,5 +19,9 @@ runGridSizes(datasets, orderLR, orderEpochs, tuneLR);
 runTSP(datasets{3}, orderLR, orderEpochs, tuneLR);
 
 % 2C
+
 runClassification(datasets{4}, orderLR, orderEpochs, tuneLR);
+
+% Document Classification
+
 
