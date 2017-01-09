@@ -8,6 +8,8 @@ orderLR = 0.9;
 orderEpochs = 250;
 tuneLR = 0.1;
 
+documents(orderLR, orderEpochs, tuneLR);
+
 % 2A2
 runTopologies(datasets, orderLR, orderEpochs, tuneLR);
 

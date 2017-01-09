@@ -2,62 +2,50 @@ function documents(orderLR, orderEpochs, tuneLR)
 
 %% 4A
 load NIPS500.mat
-global  IW;
+global IW;
 
 dim1 = 10;
 dim2 = 10;
 
-new_patterns = tfidf1(Patterns);
-
+tic;
+new_patterns = tfidf1(Patterns)';
+toc
+somTrainParameters(orderLR, 10, tuneLR, @hexagonalTopology, @dist);
+tic
 %% 4B
-MinMax = minmax(new_patterns');
+MinMax = minmax(new_patterns);
 somCreate(MinMax, [dim1 dim2]);
-somTrainParameters(0.9, 50, 0.01, @hexagonalTopology, @dist);
 somTrain(new_patterns);
 figure;
 somShow(IW, [dim1 dim2]);
-
+toc
 %% 4Ci
-
+tic;
 neuron_docs = zeros(dim1*dim2, 1);
-for i = 1 : size(new_patterns, 2)
-    winner = find(somOutput(new_patterns(:,i)));
-    neuron_docs(winner) = neuron_docs(winner) + 1;
+for i = 1:size(new_patterns, 2)
+    neuron_docs = neuron_docs + somOutput(new_patterns(:,i));
+%     winner = find(somOutput(new_patterns(:,i)));
+%     neuron_docs(winner) = neuron_docs(winner) + 1;
 end
-
+toc
 %% 4Cii
-inputs = zeros(8296, 500);
-neuron_title = zeros(dim1*dim2, 1);
-for i = 1 : dim1*dim2
-    for j = 1 : size(new_patterns,2)
-        temp(j) = negdist(IW(i,:), new_patterns(:,j));
-    end
-    [~, idx] = max(title_dist);
-    neuron_title{i} = titles{idx};
-end
+tic;
+title_dist = negdist(IW, new_patterns);
+[~, idx] = max(title_dist, [], 2);
+neuron_title = titles(idx);
+toc
 
 %% 4Ciii
-neuron_term = cell(dim1*dim2, 3);
-for i = 1 : dim1*dim2
-    [~, ord] = sort(IW(i,:));
-    neuron_term{i, 1} = terms{ord(end)};
-    neuron_term{i, 2} = terms{ord(end-1)};
-    neuron_term{i, 3} = terms{ord(end-2)};
-end
+tic;
+[~, ord] = sort(IW, 2, 'descend');
+neuron_term = terms(ord(:, 1:3));
+
+toc;
 
 %% 4Civ
-max_vals = max(IW. [], 2)
+max_vals = max(IW, [], 2);
 max_term = 0.3*max_vals;
-term1 = find(ismember(terms, 'network'));
-term2 = find(ismember(terms, 'function'));
-
-selected_neurons = find((IW(:, term1) > max_term) && (IW(:, term2) > max_term));
+selected_neurons = find((IW(:, ismember(terms, 'network')) > max_term) + (IW(:, ismember(terms, 'function')) > max_term) > 1);
 
 %%  4Cv
-for i = 1 : dim1*dim2
-    [tmp,indices] = sort(IW(i,:));
-    last = indices(end-2:end);
-    mean_value=mean(IW(:,last));
-    final(i,1:3)=mean_value ./ max_values(i);
-end
-final=100*final;
+final = 100 * reshape(mean(IW(:, ord(:,1:3))), [100 3]) ./ repmat(max_vals, [1 3]);

@@ -30,7 +30,7 @@ for i=1:orderSteps
     % exponential decay for neighbor distance and learning rate
     neighborDist = maxNeighborDist * exp((i-1)/(orderSteps-1) * log(tuneND/maxNeighborDist));
     learningRate = orderLR * exp((i-1)/(orderSteps-1) * log(tuneLR/orderLR));
-    for k=1:length(patterns)
+    for k=1:size(patterns, 2)
         somUpdate(patterns(:,k), learningRate, neighborDist)
     end
 end
