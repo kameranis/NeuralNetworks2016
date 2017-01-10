@@ -36,7 +36,7 @@ for i=1:orderSteps
 end
 
 for i=1:4*orderSteps
-    for k=1:length(patterns)
+    for k=1:size(patterns, 2)
         somUpdate(patterns(:,k), learningRate, neighborDist)
     end
 end
