@@ -24,7 +24,7 @@ fprintf('Documents SOM was trained in %.2f\n', toc);
 
 %% 4Ci Compute how many documents belong to each neuron
 tic;
-neuron_docs = zeros(dim1*dim2, 1);
+neuron_docs = zeros(N, 1);
 for i = 1:size(new_patterns, 2)
     neuron_docs = neuron_docs + somOutput(new_patterns(:,i));
 end
