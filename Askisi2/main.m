@@ -5,8 +5,8 @@ close all; clear; clc;
 
 %% Set SOM parameters
 orderLR = 0.9;
-orderEpochs = 250;
-tuneLR = 0.1;
+orderEpochs = 1000;
+tuneLR = 0.01;
 
 %% 2A2 Create SOMs with different topologies
 runTopologies(datasets, dataset_names, orderLR, orderEpochs, tuneLR);

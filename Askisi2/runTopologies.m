@@ -5,8 +5,8 @@ global IW distances;
 % Create SOM for different topologies and distance functions
 tic;
 
-for topology={@gridtop, @hexagonalTopology}
-    for distFunction={@dist, @mandist};
+for topology={@gridtop, @hextop, @randtop, @hexagonalTopology}
+    for distFunction={@boxdist, @dist, @linkdist, @mandist};
         somTrainParameters(orderLR, orderEpochs, tuneLR, topology{1}, distFunction{1});
         
         top = functions(topology{1});
